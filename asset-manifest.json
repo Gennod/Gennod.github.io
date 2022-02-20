@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ccaa9f2f.css",
+    "main.js": "/static/js/main.12afe8a4.js",
+    "static/media/item3.png": "/static/media/item3.0cd943f3f160525d22dd.png",
+    "static/media/item10.png": "/static/media/item10.30589ec924a406ffdcb0.png",
+    "static/media/item2.png": "/static/media/item2.618d0c333e3686433f9e.png",
+    "static/media/item1.png": "/static/media/item1.89b5c7cdd22d4f657f34.png",
+    "static/media/item9.png": "/static/media/item9.996e5b4e9e0bc7589a5f.png",
+    "static/media/item8.png": "/static/media/item8.e76832267b86f629b2a6.png",
+    "static/media/item5.png": "/static/media/item5.a9b92e429412b29ff7b3.png",
+    "static/media/item6.png": "/static/media/item6.1b7086118d6de859f2f1.png",
+    "static/media/item4.png": "/static/media/item4.35d15289ee7b316b94c0.png",
+    "static/media/item7.png": "/static/media/item7.36cf9631d7d25da56f3a.png",
+    "static/media/logo.png": "/static/media/logo.153f902ad387d333e547.png",
+    "static/media/banner.png": "/static/media/banner.c85c7fcf37466c061b55.png",
+    "static/media/Cosmos.TTF": "/static/media/Cosmos.024eece303998977a029.TTF",
+    "static/media/footer_img.jpg": "/static/media/footer_img.184a3b4dd489d6c15810.jpg",
+    "index.html": "/index.html",
+    "main.ccaa9f2f.css.map": "/static/css/main.ccaa9f2f.css.map",
+    "main.12afe8a4.js.map": "/static/js/main.12afe8a4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ccaa9f2f.css",
+    "static/js/main.12afe8a4.js"
+  ]
+}
