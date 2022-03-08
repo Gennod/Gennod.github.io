@@ -1,6 +1,6 @@
 <div class="footer">
-  <img class="footer__img" src="<?php echo bloginfo('template_url'); ?>/assets/img/footer/footer_img.jpg" alt="footerImg" />
-  <img class="footer__img-second" src="<?php echo bloginfo('template_url'); ?>/assets/img/footer/footer_img.jpg" alt="footerImg" />
+  <!-- <img class="footer__img" src="<?php echo bloginfo('template_url'); ?>/assets/img/footer/footer_img.jpg" alt="footerImg" />
+  <img class="footer__img-second" src="<?php echo bloginfo('template_url'); ?>/assets/img/footer/footer_img.jpg" alt="footerImg" /> -->
   <p>
     <span>Based on</span>
   </p>
@@ -11,9 +11,9 @@
   </svg>
   <p>TON</p>
 </div>
-</div>
-</div>
 <?php wp_footer(); ?>
+
+<script src="<?php echo bloginfo('template_url'); ?>/assets/js/modal.js"></script>
 </body>
 
 </html>

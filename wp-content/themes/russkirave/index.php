@@ -1,144 +1,165 @@
 <?php get_header() ?>
 
 <div class="dashboard">
-  <h1 class="dashboard__name">NFT Russkirave</h1>
+  <h1 class="dashboard__name"><?php the_field('header_title') ?></h1>
   <p class="dashboard__text">
-    is a exclusive handcrafted tokens in TON blockchain
+    <?php the_field('header_descr') ?>
   </p>
-  <h2 class="dashboard__title">Our NFT's</h2>
+  <h2 class="dashboard__title"><?php the_field('dashboard_title') ?></h2>
+  <h2 class="dashboard__subtitle dashboard__subtitle--legendary">Legendary</h2>
   <ul class="dashboard__list">
-    <li class="dashboard__item">
-      <a href="#">
-        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/home/item10.png" alt="image" />
-        <div class="dashboard__item-name">
-          <div>
-            FOMA <span>Dynamite</span>
+    <?php
+
+    $posts = get_posts(array(
+      'numberposts' => -1,
+      'category_name' => "nft_legendary",
+      'orderby' => 'date',
+      'order' => 'ASC',
+      'post_type' => 'post',
+      'suppress_filters' => true,
+    ));
+
+    
+
+    foreach ($posts as $post) {
+      setup_postdata($post);
+    ?>
+      <li data-color="<?php echo the_field("nft_color");?>" data-buy-src="<?php the_field('nft_buy-src') ?>" data-src="<?php the_field('nft_img') ?>" data-alt="<?php echo the_title(); ?>" data-descr="<?php the_field('nft_descr') ?>" data-price="<?php the_field('nft_price') ?>" data-title="<?php echo the_title(); ?>" id="show-modal" class="dashboard__item dashboard__item--<?php echo the_field("nft_color");?>">
+        <a href="#">
+          <img src="<?php the_field('nft_img') ?>" alt="image" />
+          <div class="dashboard__item-name">
+            <div>
+              <span><?php the_title(); ?></span>
+            </div>
+            <span class="dashboard__item-owner">
+              <?php the_field('nft_owner') ?>
+            </span>
           </div>
-          owner1
-        </div>
-      </a>
-    </li>
-    <li class="dashboard__item">
-      <a href="#">
-        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/home/item6.png" alt="image" />
-        <div class="dashboard__item-name">
-          <div>
-            FOMA <span>Lux</span>
+        </a>
+      </li>
+
+    <?php
+    }
+
+    wp_reset_postdata();
+    ?>
+
+  </ul>
+  <h2 class="dashboard__subtitle dashboard__subtitle--epic">Epic</h2>
+  <ul class="dashboard__list">
+    <?php
+
+    $posts = get_posts(array(
+      'numberposts' => -1,
+      'category_name' => "nft_epic",
+      'orderby' => 'date',
+      'order' => 'ASC',
+      'post_type' => 'post',
+      'suppress_filters' => true,
+    ));
+
+    
+
+    foreach ($posts as $post) {
+      setup_postdata($post);
+    ?>
+      <li data-color="<?php echo the_field("nft_color");?>" data-buy-src="<?php the_field('nft_buy-src') ?>" data-src="<?php the_field('nft_img') ?>" data-alt="<?php echo the_title(); ?>" data-descr="<?php the_field('nft_descr') ?>" data-price="<?php the_field('nft_price') ?>" data-title="<?php echo the_title(); ?>" id="show-modal" class="dashboard__item dashboard__item--<?php echo the_field("nft_color");?>">
+        <a href="#">
+          <img src="<?php the_field('nft_img') ?>" alt="image" />
+          <div class="dashboard__item-name">
+            <div>
+              <span><?php the_title(); ?></span>
+            </div>
+            <span class="dashboard__item-owner">
+              <?php the_field('nft_owner') ?>
+            </span>
           </div>
-          owner1
-        </div>
-      </a>
-    </li>
-    <li class="dashboard__item">
-      <a href="#">
-        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/home/item9.png" alt="image" />
-        <div class="dashboard__item-name">
-          <div>
-            FOMA <span>Balaklava</span>
+        </a>
+      </li>
+
+    <?php
+    }
+
+    wp_reset_postdata();
+    ?>
+
+  </ul>
+  <h2 class="dashboard__subtitle dashboard__subtitle--rare">Rare</h2>
+  <ul class="dashboard__list">
+    <?php
+
+    $posts = get_posts(array(
+      'numberposts' => -1,
+      'category_name' => "nft_rare",
+      'orderby' => 'date',
+      'order' => 'ASC',
+      'post_type' => 'post',
+      'suppress_filters' => true,
+    ));
+
+    
+
+    foreach ($posts as $post) {
+      setup_postdata($post);
+    ?>
+      <li data-color="<?php echo the_field("nft_color");?>" data-buy-src="<?php the_field('nft_buy-src') ?>" data-src="<?php the_field('nft_img') ?>" data-alt="<?php echo the_title(); ?>" data-descr="<?php the_field('nft_descr') ?>" data-price="<?php the_field('nft_price') ?>" data-title="<?php echo the_title(); ?>" id="show-modal" class="dashboard__item dashboard__item--<?php echo the_field("nft_color");?>">
+        <a href="#">
+          <img src="<?php the_field('nft_img') ?>" alt="image" />
+          <div class="dashboard__item-name">
+            <div>
+              <span><?php the_title(); ?></span>
+            </div>
+            <span class="dashboard__item-owner">
+              <?php the_field('nft_owner') ?>
+            </span>
           </div>
-          owner1
-        </div>
-      </a>
-    </li>
-    <li class="dashboard__item">
-      <a href="#">
-        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/home/item2.jpg" alt="image" />
-        <div class="dashboard__item-name">
-          <div>
-            FOMA <span>Sunrise</span>
+        </a>
+      </li>
+
+    <?php
+    }
+
+    wp_reset_postdata();
+    ?>
+
+  </ul>
+  <h2 class="dashboard__subtitle dashboard__subtitle--common">Common</h2>
+  <ul class="dashboard__list">
+    <?php
+
+    $posts = get_posts(array(
+      'numberposts' => -1,
+      'category_name' => "nft_common",
+      'orderby' => 'date',
+      'order' => 'ASC',
+      'post_type' => 'post',
+      'suppress_filters' => true,
+    ));
+
+    
+
+    foreach ($posts as $post) {
+      setup_postdata($post);
+    ?>
+      <li data-color="<?php echo the_field("nft_color");?>" data-buy-src="<?php the_field('nft_buy-src') ?>" data-src="<?php the_field('nft_img') ?>" data-alt="<?php echo the_title(); ?>" data-descr="<?php the_field('nft_descr') ?>" data-price="<?php the_field('nft_price') ?>" data-title="<?php echo the_title(); ?>" id="show-modal" class="dashboard__item dashboard__item--<?php echo the_field("nft_color");?>">
+        <a href="#">
+          <img src="<?php the_field('nft_img') ?>" alt="image" />
+          <div class="dashboard__item-name">
+            <div>
+              <span><?php the_title(); ?></span>
+            </div>
+            <span class="dashboard__item-owner">
+              <?php the_field('nft_owner') ?>
+            </span>
           </div>
-          owner1
-        </div>
-      </a>
-    </li>
-    <li class="dashboard__item">
-      <a href="#">
-        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/home/item4.png" alt="image" />
-        <div class="dashboard__item-name">
-          <div>
-            FOMA <span>Black</span>
-          </div>
-          owner1
-        </div>
-      </a>
-    </li>
-    <li class="dashboard__item">
-      <a href="#">
-        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/home/item3.png" alt="image" />
-        <div class="dashboard__item-name">
-          <div>
-            FOMA <span>Abu Dhabi</span>
-          </div>
-          owner1
-        </div>
-      </a>
-    </li>
-    <li class="dashboard__item">
-      <a href="#">
-        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/home/item1.jpg" alt="image" />
-        <div class="dashboard__item-name">
-          <div>
-            FOMA <span>Hotline</span>
-          </div>
-          owner1
-        </div>
-      </a>
-    </li>
-    <li class="dashboard__item">
-      <a href="#">
-        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/home/item8.png" alt="image" />
-        <div class="dashboard__item-name">
-          <div>
-            FOMA <span>za VDV</span>
-          </div>
-          owner1
-        </div>
-      </a>
-    </li>
-    <li class="dashboard__item">
-      <a href="#">
-        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/home/item7.png" alt="image" />
-        <div class="dashboard__item-name">
-          <div>
-            FOMA <span>Marsianin</span>
-          </div>
-          owner1
-        </div>
-      </a>
-    </li>
-    <li class="dashboard__item">
-      <a href="#">
-        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/home/item5.png" alt="image" />
-        <div class="dashboard__item-name">
-          <div>
-            FOMA <span>Ferz</span>
-          </div>
-          owner1
-        </div>
-      </a>
-    </li>
-    <li class="dashboard__item">
-      <a href="#">
-        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/home/item11.png" alt="image" />
-        <div class="dashboard__item-name">
-          <div>
-            FOMA <span>Savage</span>
-          </div>
-          owner1
-        </div>
-      </a>
-    </li>
-    <li class="dashboard__item">
-      <a href="#">
-        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/home/item12.png" alt="image" />
-        <div class="dashboard__item-name">
-          <div>
-            FOMA <span>Miami</span>
-          </div>
-          owner1
-        </div>
-      </a>
-    </li>
+        </a>
+      </li>
+
+    <?php
+    }
+
+    wp_reset_postdata();
+    ?>
 
   </ul>
   <div class="dashboard__describe">
@@ -160,4 +181,5 @@
       </div>
     </a>
   </div>
-  <?php get_footer(); ?>
+</div>
+<?php get_footer(); ?>

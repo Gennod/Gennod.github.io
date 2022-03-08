@@ -23,10 +23,10 @@
 define( 'DB_NAME', 'russkirave' );
 
 /** Имя пользователя базы данных */
-define( 'DB_USER', 'admin' );
+define( 'DB_USER', 'Vsevolod' );
 
 /** Пароль к базе данных */
-define( 'DB_PASSWORD', '3CpR4sZrtqjBybLI' );
+define( 'DB_PASSWORD', '232323' );
 
 /** Имя сервера базы данных */
 define( 'DB_HOST', '127.0.0.1:3306' );
@@ -36,6 +36,8 @@ define( 'DB_CHARSET', 'utf8mb4' );
 
 /** Схема сопоставления. Не меняйте, если не уверены. */
 define( 'DB_COLLATE', '' );
+
+define('WP_MEMORY_LIMIT', '128M');
 
 /**#@+
  * Уникальные ключи и соли для аутентификации.

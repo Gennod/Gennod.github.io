@@ -56,7 +56,6 @@ require_once ABSPATH . WPINC . '/plugin.php';
  * @since 2.0.0
  */
 global $blog_id;
-
 // Set initial default constants including WP_MEMORY_LIMIT, WP_MAX_MEMORY_LIMIT, WP_DEBUG, SCRIPT_DEBUG, WP_CONTENT_DIR and WP_CACHE.
 wp_initial_constants();
 
